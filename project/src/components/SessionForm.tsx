@@ -88,7 +88,7 @@ export const SessionForm: React.FC<SessionFormProps> = ({
               value={formData.title}
               onChange={handleChange}
               required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500"
               placeholder="e.g., Introduction to Machine Learning"
             />
           </div>
@@ -105,7 +105,7 @@ export const SessionForm: React.FC<SessionFormProps> = ({
                 value={formData.date}
                 onChange={handleChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500"
               />
             </div>
 
@@ -120,7 +120,7 @@ export const SessionForm: React.FC<SessionFormProps> = ({
                 value={formData.time}
                 onChange={handleChange}
                 required
-                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500"
               />
             </div>
           </div>
@@ -138,7 +138,7 @@ export const SessionForm: React.FC<SessionFormProps> = ({
               required
               min="15"
               max="480"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500"
             />
           </div>
 
@@ -152,7 +152,7 @@ export const SessionForm: React.FC<SessionFormProps> = ({
               value={formData.description}
               onChange={handleChange}
               rows={3}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500"
               placeholder="Brief description of the session (optional)"
             />
           </div>
@@ -167,7 +167,7 @@ export const SessionForm: React.FC<SessionFormProps> = ({
             </button>
             <button
               type="submit"
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center gap-2"
+              className="px-4 py-2 bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white rounded-md hover:from-fuchsia-700 hover:to-purple-700 transition-colors flex items-center gap-2"
             >
               <Plus className="h-4 w-4" />
               {editingSession ? 'Update' : 'Add'} Session

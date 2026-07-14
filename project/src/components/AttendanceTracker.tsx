@@ -37,7 +37,7 @@ export const AttendanceTracker: React.FC<AttendanceTrackerProps> = ({
     <div className="space-y-6">
       <div className="bg-white rounded-lg shadow-md p-6">
         <h2 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-          <Calendar className="h-5 w-5 text-blue-500" />
+          <Calendar className="h-5 w-5 text-fuchsia-500" />
           Mark Attendance
         </h2>
 
@@ -50,7 +50,7 @@ export const AttendanceTracker: React.FC<AttendanceTrackerProps> = ({
               id="session"
               value={selectedSession}
               onChange={(e) => setSelectedSession(e.target.value)}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500"
             >
               <option value="">Choose a session...</option>
               {sessions.map(session => (
@@ -73,21 +73,21 @@ export const AttendanceTracker: React.FC<AttendanceTrackerProps> = ({
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search by name or email..."
-                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500"
               />
             </div>
           </div>
         </div>
 
         {selectedSessionData && (
-          <div className="bg-blue-50 rounded-lg p-4 mb-6">
-            <h3 className="font-semibold text-blue-900">{selectedSessionData.title}</h3>
-            <p className="text-blue-700">
-              {formatDate(selectedSessionData.date)} at {formatTime(selectedSessionData.time)} 
+          <div className="bg-cyan-50 rounded-lg p-4 mb-6">
+            <h3 className="font-semibold text-cyan-900">{selectedSessionData.title}</h3>
+            <p className="text-cyan-700">
+              {formatDate(selectedSessionData.date)} at {formatTime(selectedSessionData.time)}
               ({selectedSessionData.duration} minutes)
             </p>
             {selectedSessionData.description && (
-              <p className="text-blue-600 mt-1">{selectedSessionData.description}</p>
+              <p className="text-cyan-600 mt-1">{selectedSessionData.description}</p>
             )}
           </div>
         )}
@@ -123,8 +123,8 @@ export const AttendanceTracker: React.FC<AttendanceTrackerProps> = ({
                         onClick={() => onMarkAttendance(participant.id, selectedSession, 'present')}
                         className={`px-4 py-2 rounded-md flex items-center gap-2 transition-colors ${
                           status === 'present'
-                            ? 'bg-green-600 text-white'
-                            : 'bg-green-100 text-green-700 hover:bg-green-200'
+                            ? 'bg-emerald-600 text-white'
+                            : 'bg-emerald-100 text-emerald-700 hover:bg-emerald-200'
                         }`}
                       >
                         <Check className="h-4 w-4" />
@@ -135,8 +135,8 @@ export const AttendanceTracker: React.FC<AttendanceTrackerProps> = ({
                         onClick={() => onMarkAttendance(participant.id, selectedSession, 'absent')}
                         className={`px-4 py-2 rounded-md flex items-center gap-2 transition-colors ${
                           status === 'absent'
-                            ? 'bg-red-600 text-white'
-                            : 'bg-red-100 text-red-700 hover:bg-red-200'
+                            ? 'bg-rose-600 text-white'
+                            : 'bg-rose-100 text-rose-700 hover:bg-rose-200'
                         }`}
                       >
                         <X className="h-4 w-4" />

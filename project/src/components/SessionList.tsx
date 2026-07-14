@@ -37,7 +37,7 @@ export const SessionList: React.FC<SessionListProps> = ({
         
         <button
           onClick={onAddNew}
-          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors flex items-center gap-2"
+          className="px-4 py-2 bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white rounded-md hover:from-fuchsia-700 hover:to-purple-700 transition-colors flex items-center gap-2"
         >
           <Plus className="h-4 w-4" />
           Add Session
@@ -53,7 +53,7 @@ export const SessionList: React.FC<SessionListProps> = ({
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search sessions..."
-              className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-fuchsia-500 focus:border-fuchsia-500"
             />
           </div>
         </div>
@@ -67,7 +67,7 @@ export const SessionList: React.FC<SessionListProps> = ({
             {!searchTerm && (
               <button
                 onClick={onAddNew}
-                className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                className="px-6 py-3 bg-gradient-to-r from-fuchsia-600 to-purple-600 text-white rounded-md hover:from-fuchsia-700 hover:to-purple-700 transition-colors"
               >
                 Schedule Your First Session
               </button>
@@ -83,7 +83,7 @@ export const SessionList: React.FC<SessionListProps> = ({
                 <div
                   key={session.id}
                   className={`border rounded-lg p-6 hover:shadow-md transition-shadow ${
-                    isUpcoming ? 'border-blue-200 bg-blue-50' : 'border-gray-200'
+                    isUpcoming ? 'border-cyan-200 bg-cyan-50' : 'border-gray-200'
                   }`}
                 >
                   <div className="flex justify-between items-start">
@@ -91,7 +91,7 @@ export const SessionList: React.FC<SessionListProps> = ({
                       <div className="flex items-center gap-2 mb-2">
                         <h3 className="font-semibold text-gray-900 text-lg">{session.title}</h3>
                         {isUpcoming && (
-                          <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full font-medium">
+                          <span className="px-2 py-1 bg-cyan-100 text-cyan-800 text-xs rounded-full font-medium">
                             Upcoming
                           </span>
                         )}
@@ -126,7 +126,7 @@ export const SessionList: React.FC<SessionListProps> = ({
                           </div>
                           <div className="mt-2 bg-gray-200 rounded-full h-2">
                             <div
-                              className="bg-green-500 h-2 rounded-full transition-all"
+                              className="bg-gradient-to-r from-emerald-500 to-cyan-500 h-2 rounded-full transition-all"
                               style={{ width: `${attendanceRate}%` }}
                             />
                           </div>
@@ -137,13 +137,13 @@ export const SessionList: React.FC<SessionListProps> = ({
                     <div className="flex gap-2 ml-4">
                       <button
                         onClick={() => onEdit(session)}
-                        className="text-blue-600 hover:text-blue-800 transition-colors p-2"
+                        className="text-fuchsia-600 hover:text-fuchsia-800 transition-colors p-2"
                       >
                         <Edit className="h-4 w-4" />
                       </button>
                       <button
                         onClick={() => onDelete(session.id)}
-                        className="text-red-600 hover:text-red-800 transition-colors p-2"
+                        className="text-rose-600 hover:text-rose-800 transition-colors p-2"
                       >
                         <Trash2 className="h-4 w-4" />
                       </button>

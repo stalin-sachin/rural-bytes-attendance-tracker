@@ -170,13 +170,13 @@ function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-fuchsia-50 via-purple-50 to-cyan-50">
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-r from-fuchsia-500 via-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
                 <Brain className="h-6 w-6 text-white" />
               </div>
               <div>
@@ -184,17 +184,17 @@ function App() {
                 <p className="text-sm text-gray-500">Attendance Tracker</p>
               </div>
             </div>
-            
+
             <div className="flex items-center gap-2">
               <button
                 onClick={handleExport}
-                className="px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2"
+                className="px-3 py-2 text-gray-600 hover:text-fuchsia-600 transition-colors flex items-center gap-2"
               >
                 <Download className="h-4 w-4" />
                 Export
               </button>
-              
-              <label className="px-3 py-2 text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-2 cursor-pointer">
+
+              <label className="px-3 py-2 text-gray-600 hover:text-fuchsia-600 transition-colors flex items-center gap-2 cursor-pointer">
                 <Upload className="h-4 w-4" />
                 Import
                 <input
@@ -221,7 +221,7 @@ function App() {
                   onClick={() => setActiveTab(tab.id as TabType)}
                   className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                     activeTab === tab.id
-                      ? 'border-blue-500 text-blue-600'
+                      ? 'border-fuchsia-500 text-fuchsia-600'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                   }`}
                 >
